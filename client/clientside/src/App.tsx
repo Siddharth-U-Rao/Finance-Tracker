@@ -19,7 +19,7 @@ const Navbar = () => {
       <Link to="/">Dashboard</Link>
 
       <SignedIn>
-        <UserButton afterSignOutUrl="/auth" />
+        <UserButton afterSignOutUrl="http://localhost:5173/auth" />
       </SignedIn>
 
       <SignedOut>
@@ -34,6 +34,7 @@ const Navbar = () => {
   );
 };
 
+// Main App Component
 function App() {
   return (
     <Router>
@@ -49,6 +50,8 @@ function App() {
             }
           />
           <Route path="/auth" element={<Auth />} />
+          {/* Optional fallback 404 route */}
+          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
       </div>
     </Router>
