@@ -4,7 +4,7 @@ import {
   useFinancialRecords,
 } from "../../context/financial-record-context";
 import { useTable, Column, CellProps } from "react-table";
-import "./financial-record.css"; // Make sure this file exists
+import "./financial-record.css"; 
 
 interface EditableCellProps extends CellProps<FinancialRecord> {
   updateRecord: (rowIndex: number, columnId: string, value: any) => void;
